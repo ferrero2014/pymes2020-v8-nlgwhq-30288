@@ -40,7 +40,7 @@ import { InsumosService } from './services/services/InsumosService';
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component: InicioComponent },
       { path: 'articulos', component: ArticulosComponent },
-      { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
+     // { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
       { path: 'empresas', component: InsumosComponent },
     ]),
     NgbPaginationModule,
