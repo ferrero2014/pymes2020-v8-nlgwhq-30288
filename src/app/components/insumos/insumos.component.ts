@@ -13,7 +13,7 @@ templateUrl: "./insumos.component.html",
 styleUrls: ["./insumos.component.css"] 
 }) 
 export class InsumosComponent implements OnInit { 
-Titulo = "Insumoss"; 
+Titulo = "Insumos"; 
 TituloAccionABMC = { 
 A: "(Agregar)", 
 B: "(Eliminar)", 
@@ -54,14 +54,14 @@ Nombre: [""],
 Activo: [true] 
 }); 
 this.FormReg = this.formBuilder.group({ 
-IdEmpresa: [0], 
-Nombre: [ 
+IdInsumo: [0], 
+Descripcion: [ 
 "", 
 [Validators.required, Validators.maxLength(50)] 
 ], 
-CantidadEmpleados: [null, [Validators.required, Validators.pattern("[0-9]{1,7}")]], 
-IdEmpresa: ["", [Validators.required]], 
-FechaFundacion: [ 
+Cantidad: [null, [Validators.required, Validators.pattern("[0-9]{1,7}")]], 
+
+FechaStock: [ 
 "", 
 [ 
 Validators.required, 
@@ -147,8 +147,8 @@ arrFecha[1] - 1,
 arrFecha[0] 
 ).toISOString(); 
 // agregar post 
-if (itemCopy.IdArticulo == 0 || itemCopy.IdArticulo == null) { 
-itemCopy.IdArticulo = 0; 
+if (itemCopy.IdArticulo == 0 || itemCopy.IdInsumo == null) { 
+itemCopy.IdInsumo = 0; 
 this.articulosService.post(itemCopy).subscribe((res: any) => { 
 this.Volver(); 
 this.modalDialogService.Alert("Registro agregado correctamente."); 
