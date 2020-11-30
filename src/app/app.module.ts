@@ -50,7 +50,8 @@ import { InsumosService } from './services/services/InsumosService';
   providers: [
      {provide: APP_BASE_HREF, useValue : '/' },
     { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, 
-  
+  ],
   bootstrap: [AppComponent]
-});
-export class AppModule {}
+},
+export app.NgModule
+  
