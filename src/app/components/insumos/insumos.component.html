@@ -59,53 +59,35 @@ Imprimir</button>
 <!-- Registro en Alta,Modificacion y Consulta --> 
 <form name="FormReg" [formGroup]='FormReg' *ngIf="AccionABMC != 'L'" class="bg-light"> 
 <fieldset [disabled]="AccionABMC==='C'"> 
-<!--campo nombre--> 
+<!--campo descripcion--> 
 <div class="form-group row"> 
 <label class="col-form-label col-sm-2 col-sm-offset-2">Descripcion <span 
 class="text-danger">*</span></label> 
 <div class="col-sm-6"> 
 <input type="text" class="form-control" formControlDescripcion="Nombre" 
 [ngClass]="{'is-invalid': (FormReg.controls.Descripcion.touched || submitted) 
-&& FormReg.controls.Nombre.errors}" /> 
-<span class="text-danger" *ngIf="(FormReg.controls.Nombre.touched || submitted) 
-&& FormReg.controls.Nombre.errors?.required"> 
+&& FormReg.controls.Descripcion.errors}" /> 
+<span class="text-danger" *ngIf="(FormReg.controls.Descripcion.touched || submitted) 
+&& FormReg.controls.Descripcion.errors?.required"> 
 Dato requerido. 
 </span> 
 
-<span class="text-danger" *ngIf="(FormReg.controls.Nombre.errors?.minlength || FormReg.controls.Nombre.errors?.maxlength) "> 
+<span class="text-danger" *ngIf="(FormReg.controls.Descripcion.errors?.minlength || FormReg.controls.Nombre.errors?.maxlength) "> 
 Dato texto, hasta 50 caracteres. 
 </span> 
 </div> 
 </div> 
-<!--campo fechafundacion--> 
-<div class="form-group row"> 
-<label class="col-form-label col-sm-2 col-sm-offset-2">Fecha de Fundacion <span 
-class="text-danger">*</span></label> 
-<div class="col-sm-6"> 
-<input class="form-control" 
-formControlName="FechaFundacion" 
-[ngClass]="{'is-invalid': (FormReg.controls.FechaFundacion.touched || submitted) 
-&& FormReg.controls.FechaFundacion.errors}" /> 
-<span class="text-danger" *ngIf="(FormReg.controls.FechaFundacion.touched || submitted) 
-&& FormReg.controls.FechaFundacion.errors?.required"> 
-Dato requerido. 
-</span> 
-<span class="text-danger" *ngIf="FormReg.controls.FechaFundacion.errors?.pattern"> 
-Dato fecha, formato dd/mm/aaaa. 
-</span> 
-</div> 
-</div> 
-<!--campo cantidad empleados--> 
+<!--campo cantidad--> 
 <div class="form-group row"> 
 <label class="col-form-label col-sm-2 col-sm-offset-2" > 
-CantidadEmpleados <span class="text-danger">*</span> 
+Cantidad <span class="text-danger">*</span> 
 </label> 
 <div class="col-sm-6"> 
-<input type="text" class="form-control" formControlName="CantidadEmpleados" 
-[ngClass]="{'is-invalid': (FormReg.controls.CantidadEmpleados.touched || submitted) 
-&& FormReg.controls.CantidadEmpleados.errors}" /> 
-<span class="text-danger" *ngIf="(FormReg.controls.CantidadEmpleados.touched || submitted) 
-&& FormReg.controls.CantidadEmpleados.errors?.required"> 
+<input type="text" class="form-control" formControlName="Cantidad" 
+[ngClass]="{'is-invalid': (FormReg.controls.Cantidad.touched || submitted) 
+&& FormReg.controls.Cantidad.errors}" /> 
+<span class="text-danger" *ngIf="(FormReg.controls.Cantidad.touched || submitted) 
+&& FormReg.controls.Cantidad.errors?.required"> 
 Dato requerido. 
 </span> 
 <span class="text-danger" *ngIf="FormReg.controls.Stock.errors?.pattern"> 
@@ -114,6 +96,25 @@ Dato numérico, 1 a 6 dígitos.
 </div> 
 </div> 
 </fieldset> 
+<!--fecha stock--> 
+<div class="form-group row"> 
+<label class="col-form-label col-sm-2 col-sm-offset-2">Fecha Stock <span 
+class="text-danger">*</span></label> 
+<div class="col-sm-6"> 
+<input class="form-control" 
+formControlName="FechaStock" 
+[ngClass]="{'is-invalid': (FormReg.controls.FechaStock.touched || submitted) 
+&& FormReg.controls.FechaStock.errors}" /> 
+<span class="text-danger" *ngIf="(FormReg.controls.FechaStock.touched || submitted) 
+&& FormReg.controls.FechaStock.errors?.required"> 
+Dato requerido. 
+</span> 
+<span class="text-danger" *ngIf="FormReg.controls.FechaStock.errors?.pattern"> 
+Dato fecha, formato dd/mm/aaaa. 
+</span> 
+</div> 
+</div> 
+
 <!-- Botones Grabar, Cancelar/Volver' --> 
 <div class="row justify-content-center"> 
 <button type="button" class="btn btn-primary" (click)="Grabar()"> 
