@@ -7,7 +7,7 @@ export const Insumos: Insumo[] = [
   {
      IdInsumo: number;
       Descripcion: string;
-      
+      FechaAlta: "2017-01-23T00:00:00",
       FechaStock: IdArticulo: 108,
       FechaAlta: "2017-01-23T00:00:00",
     Activo: false

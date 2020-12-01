@@ -1,27 +1,4 @@
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF} from '@angular/common';  
-import { ReactiveFormsModule } from "@angular/forms";
-
-import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
-import { MyInterceptor } from "./shared/my-interceptor";
-
-import {
-  NgbPaginationModule,
-  NgbModalModule
-} from "@ng-bootstrap/ng-bootstrap";
-
-import { AppComponent } from "./app.component";
-import { MenuComponent } from "./components/menu/menu.component";
-import { InicioComponent } from "./components/inicio/inicio.component";
-import { ArticulosComponent } from "./components/articulos/articulos.component";
-import { ArticulosFamiliasComponent } from "./components/articulos-familias/articulos-familias.component";
-import { ModalDialogComponent } from "./components/modal-dialog/modal-dialog.component";
-import { InsumosComponent } from './components/insumos/insumos.component';
-import { InsumosService } from './services/services/InsumosService';
-
+//
 @NgModule({
   declarations: [
     AppComponent,
