@@ -11,7 +11,7 @@
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
+    //ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -23,10 +23,8 @@
     NgbPaginationModule,
     NgbModalModule,
   ],
-  
-  providers: [
-     {provide: APP_BASE_HREF, useValue : '/' },
-      export app.module,
-  ],
+    providers: [
+     {provide: APP_BASE_HREF, useValue : '/' }
+        ],
     
   
