@@ -26,7 +26,7 @@
   
   providers: [
      {provide: APP_BASE_HREF, useValue : '/' },
-  ]
-  export app.Module
+      export app.module,
   ],
+    
   
