@@ -23,12 +23,10 @@
     NgbPaginationModule,
     NgbModalModule,
   ],
-  entryComponents: [ModalDialogComponent],
+  
   providers: [
      {provide: APP_BASE_HREF, useValue : '/' },
-    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, 
+  ]
+  export app.Module
   ],
-  bootstrap: [AppComponent]
-},
-export app.NgModule
   
